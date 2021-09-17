@@ -1,0 +1,78 @@
+:root {
+  --primary: #d71125;
+  --primary-dark: #bc0f20;
+  --secondary: #737f88;
+  --white: #fff;
+  --grey: #9ca3af;
+  --grey-light: #f2f2f2;
+
+  --font-primary: "DM Sans", serif;
+  --font-secondary: "Playfair Display", sans-serif;
+  --default-font-size: 1.5rem;
+}
+
+$spacer: 1rem !default;
+$spacers: () !default;
+$spacers: map-merge(
+  (
+    0: 0,
+    1: (
+      $spacer * 1,
+    ),
+    1.5: (
+      $spacer * 1.5,
+    ),
+    2: (
+      $spacer * 2,
+    ),
+    2.5: (
+      $spacer * 2.5,
+    ),
+    3: (
+      $spacer * 3,
+    ),
+    4: (
+      $spacer * 4,
+    ),
+    5: (
+      $spacer * 5,
+    ),
+    6: (
+      $spacer * 6,
+    ),
+    7: (
+      $spacer * 7,
+    ),
+    8: (
+      $spacer * 8,
+    ),
+    9: (
+      $spacer * 9,
+    ),
+    10: (
+      $spacer * 10,
+    ),
+  ),
+  $spacers
+);
+
+.container {
+  width: 100%;
+  max-width: 130rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.container-full {
+  width: 100%;
+  padding-left: 10rem;
+  padding-right: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-responsive {
+  width: 100%;
+  height: auto;
+}

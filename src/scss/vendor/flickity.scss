@@ -1,0 +1,222 @@
+/*! Flickity v2.2.1
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
+}
+
+.flickity-enabled:focus { outline: none; }
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100% !important;
+}
+
+.flickity-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* draggable */
+
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+
+/* ---- flickity-button ---- */
+
+.flickity-button {
+  position: absolute;
+  background: hsla(0, 0%, 100%, 0.75);
+  border: none;
+  color: #333;
+  bottom: 14rem;
+}
+
+.flickity-button:hover {
+  background: white;
+  cursor: pointer;
+}
+
+.flickity-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px #19F;
+}
+
+.flickity-button:active {
+  opacity: 0.6;
+}
+
+.flickity-button:disabled {
+  opacity: 0.3;
+  cursor: auto;
+  /* prevent disabled button from capturing pointer up event. #716 */
+  pointer-events: none;
+}
+
+.flickity-button-icon {
+  fill: currentColor;
+}
+
+/* ---- previous/next buttons ---- */
+
+.flickity-prev-next-button {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  
+}
+
+.flickity-prev-next-button.previous { right: 4rem; }
+.flickity-prev-next-button.next { right: 1rem ; }
+/* right to left */
+.flickity-rtl .flickity-prev-next-button.previous {
+  left: auto;
+  right: 10px;
+}
+.flickity-rtl .flickity-prev-next-button.next {
+  left: auto;
+  right: 4rem;
+}
+
+.flickity-prev-next-button .flickity-button-icon {
+  position: absolute;
+  left: 20%;
+  top: 20%;
+  width: 60%;
+  height: 60%;
+}
+
+/* ---- page dots ---- */
+
+.flickity-page-dots {
+  position: absolute;
+  width: 100%;
+  bottom: 3.5rem;
+  left: 5rem;
+  margin: 0;
+  list-style: none;
+  line-height: 1;
+}
+
+.flickity-rtl .flickity-page-dots { direction: rtl; }
+
+.flickity-page-dots .dot {
+  display: inline-block;
+  width: 15rem;
+  height: .7rem;
+  background: var(--white);
+  opacity: 0.25;
+  cursor: pointer;
+
+  @include respond("phone") {
+
+    display: none;
+  }
+}
+
+.flickity-page-dots .dot.is-selected {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+
+
+/* ---- Flickity Datahouse ----*/
+
+.carousel {
+
+  &-cell {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 19rem;
+    counter-increment: carousel-cell;
+
+    @include respond("phone") {
+      grid-template-rows: 1fr repeat(2, min-content);
+    }
+
+  }
+
+  &-img {
+
+    grid-column: 1 / -1;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+
+  }
+
+  &-text {
+
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 3rem 5rem;
+    grid-column: 1 /3;
+    @include respond("phone") {
+      grid-column: 1/-1;
+      padding: 1.5rem;
+    }
+
+
+  }
+
+  &-group {
+
+    background: var(--primary-dark);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+
+    @include respond("phone") {
+      grid-column: 1/-1;
+      padding: 1.5rem;
+      align-items: flex-start;
+    }
+  }
+
+  &-icon {
+
+    width: 2rem;
+    height: 2rem;
+    fill: var(--white);
+
+  }
+
+
+
+
+
+}
+
+/* cell number */
+/* position dots up a bit */
+
+
+
+/* position dots up a bit */
+

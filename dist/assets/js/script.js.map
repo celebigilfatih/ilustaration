@@ -1,0 +1,1 @@
+{"version":3,"sources":["script.js"],"names":["navbar__mobileEL","document","querySelector","headerEl","addEventListener","classList","toggle"],"mappings":"AAAA,MAAMA,iBAAmBC,SAASC,cAAc,mBAC1CC,SAAWF,SAASC,cAAc,WAExCF,iBAAiBI,iBAAiB,SAAS,WACzCD,SAASE,UAAUC,OAAO","file":"script.js"}
