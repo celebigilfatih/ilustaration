@@ -1,23 +1,24 @@
 .header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  padding: 5rem 10rem;
+  border-bottom: 1px solid var(--grey-light);
 
-  
-    padding: 5rem 10rem;
-    border-bottom: 1px solid var(--grey-light);
+  @include respond("phone") {
+    padding: 1.5rem;
+  }
+
+  &__title {
+    font-size: 3.6rem;
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    z-index: 10;
 
     @include respond("phone") {
-        padding: 2.5rem 1.5rem;
+      font-size: 2rem;
     }
-
-    &__title {
-
-        font-size: 3.6rem;
-        font-family: var(--font-secondary);
-        font-weight: 700;
-    }
+  }
 }
-

@@ -1,9 +1,7 @@
 :root {
-  --primary: #d71125;
-  --primary-dark: #bc0f20;
-  --secondary: #737f88;
+  --dark: #111827;
   --white: #fff;
-  --grey: #9ca3af;
+  --grey: #757575;
   --grey-light: #f2f2f2;
 
   --font-primary: "DM Sans", serif;
@@ -62,7 +60,6 @@ $spacers: map-merge(
   margin-left: auto;
   margin-right: auto;
 }
-
 
 .container-full {
   width: 100%;

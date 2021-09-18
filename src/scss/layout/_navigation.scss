@@ -1,46 +1,6 @@
-
-.navbar__list {
-  display: flex;
-  gap: 10rem;
-
-}
-
-.navbar__link {
-
-  font-size: 1.8rem;
-  text-decoration: none;
-  font-weight: 400;
-  transition: ease all 0.3s;
-}
-
-.navbar__link:hover,
-.navbar__link:active {
-  color: #0d141a;
-}
-
-.navbar__mobile--icon {
-  width: 3.6rem;
-  height: 3.6rem;
-  color: var(--dark);
-}
-
-.navbar__mobile {
-  display: none;
-  cursor: pointer;
-  margin-top: .5rem;
-}
-
-.navbar__mobile--icon[name="close-outline"] {
-  display: none;
-}
-
-/* Media Queries */
-@media (max-width: 57.5rem) {
-  .navbar__mobile {
-    display: block;
-  }
-  .navbar {
-    background: #ca0117;
+.navbar {
+  @include respond("phone") {
+    background: var(--grey);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,29 +17,72 @@
     visibility: hidden;
   }
 
-  .navbar__list {
+  &__list {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    gap: 10rem;
+    @include respond("phone") {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  &__link {
+    font-size: 1.8rem;
+    text-decoration: none;
+    font-weight: 400;
+    transition: ease all 0.3s;
+
+    &:hover,
+    &:active {
+      color: var(--grey);
+    }
+
+    @include respond("phone") {
+      color: #fcfcfc;
+    }
   }
 
-  .navbar__link {
-    color: #fcfcfc;
+  &__mobile--icon {
+    width: 3.6rem;
+    height: 3.6rem;
+    color: var(--dark);
   }
 
-  .navbar__open .navbar {
-    opacity: 1;
-    pointer-events: auto;
-    visibility: visible;
-    transform: translateX(0);
-  }
-
-  .navbar__open .navbar__mobile--icon[name="close-outline"] {
-    display: block;
-  }
-
-  .navbar__open .navbar__mobile--icon[name="menu-outline"] {
+  &__mobile {
     display: none;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    @include respond("phone") {
+      margin-top: 0;
+    }
+
+    &--icon[name="close-outline"] {
+      display: none;
+    }
+
+    @include respond("phone") {
+      display: block;
+    }
+  }
+
+  &__open .navbar {
+    @include respond("phone") {
+      opacity: 1;
+      pointer-events: auto;
+      visibility: visible;
+      transform: translateX(0);
+    }
+  }
+
+  &__open .navbar__mobile--icon[name="close-outline"] {
+    @include respond("phone") {
+      display: block;
+    }
+  }
+  &__open .navbar__mobile--icon[name="menu-outline"] {
+    @include respond("phone") {
+      display: none;
+    }
   }
 }
