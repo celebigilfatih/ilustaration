@@ -14,7 +14,6 @@
   }
 
   &__title {
-
     font-size: 6.5rem;
     font-weight: 900;
     font-family: var(--font-secondary);
@@ -52,7 +51,6 @@
   }
 
   &__title {
-
     @include respond("phone") {
       margin-bottom: 2.5rem;
     }
@@ -67,38 +65,30 @@
 
   &__item {
     &--1 {
-
     }
 
     &--2 {
-
     }
 
     &--3 {
-
     }
 
     &--4 {
-
     }
 
     &--5 {
-
     }
 
     &--5 {
     }
     &--6 {
-
     }
     &--7 {
-
     }
     &--8 {
-
     }
     &--9 {
-      grid-column: 1 /  -1;
+      grid-column: 1 / -1;
     }
   }
 
@@ -111,7 +101,6 @@
 }
 
 .aboutme {
-
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
 
@@ -121,7 +110,6 @@
 }
 
 .contact {
-
   padding-top: 10rem;
   padding-bottom: 20rem;
 
@@ -140,23 +128,57 @@
   }
 }
 
-
 .reference {
-
   padding-top: 7.5rem;
   padding-bottom: 7.5rem;
 
   &__group {
-
     display: grid;
-    grid-template-columns: repeat(auto-fit,(minmax(35rem, 1fr)));
+    grid-template-columns: repeat(auto-fit, (minmax(35rem, 1fr)));
     grid-column-gap: 5rem;
     grid-row-gap: 2.5rem;
-    
   }
   &__item {
     border: 1px solid var(--grey-light);
     padding: 1.5rem;
+
+    &--1 {
+    }
+    &--2 {
+    }
+    &--3 {
+    }
+    &--4 {
+      grid-row: 1;
+    }
+    &--5 {
+    }
+    &--6 {
+      grid-row: 1;
+      grid-column: 2;
+    }
+    &--7 {
+    }
+    &--8 {
+      grid-row: 3;
+      grid-column: 3;
+    }
+    &--9 {
+      grid-row: 3;
+      grid-column: 2;
+    }
+    &--10 {
+    }
+    &--11 {
+      grid-row: 2;
+      grid-column: 2;
+    }
+    &--12 {
+      grid-row: 3;
+    }
+    &--13 {
+      grid-row: 2;
+    }
   }
 
   &__list {
@@ -164,4 +186,3 @@
     line-height: 4.2rem;
   }
 }
-
