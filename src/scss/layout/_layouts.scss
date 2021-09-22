@@ -150,7 +150,18 @@
 
     display: grid;
     grid-template-columns: repeat(auto-fit,(minmax(35rem, 1fr)));
-    grid-gap: 3rem;
+    grid-column-gap: 5rem;
+    grid-row-gap: 2.5rem;
+    
+  }
+  &__item {
+    border: 1px solid var(--grey-light);
+    padding: 1.5rem;
+  }
+
+  &__list {
+    list-style-type: none;
+    line-height: 4.2rem;
   }
 }
 
