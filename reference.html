@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Cemre Arslan | Freelance Ilustrator</title>
-    <link rel="stylesheet" href="dist/assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
   </head>
   <body>
     <header class="header">
@@ -163,16 +163,20 @@
     </section>
 
     <footer class="footer">
-      <h4 class="footer__title">Contact</h4>
-      <div class="footer__contact">
-        <a class="footer__link" href="mailto:info@cemrearslan.com"
-          >info@cemrearslan.com</a
-        >
-        <p><span>*</span>Please send me email only for working purpose.</p>
+      <div class="container">
+        <div class="footer__group">
+          <h3 class="secondary__title">Contact</h3>
+          <div class="footer__contact">
+            <form class="footer__form">
+              <input id="email" type="email" placeholder="Email address" />
+              <button class="footer__button">Subscribe Now</button>
+            </form>
+          </div>
+        </div>
       </div>
     </footer>
 
-    <script src="dist/assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
